@@ -23,6 +23,7 @@ define("Connection", ["MessageSender", "MessageReceiver"], function(MessageSende
       p.WebSocket.onopen = function(evt){
 
           var characterName = getCookie("name");
+          console.log( "Log In Test." );
           if (characterName == null)
             characterName = "Ness";
           var msg = {'type': 'init', 'name': characterName};//, 'token': getCookie("token")};
